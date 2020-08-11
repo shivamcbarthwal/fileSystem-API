@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
-var path = require('path');
-var mime = require('mime-types')
 
 // GET content of file system: files and directories
 

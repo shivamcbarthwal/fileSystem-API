@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
-var path = require('path');
-var mime = require('mime-types');
 
 router.delete('/*', function(req, res) {
+
+    // reads file path using the absolute path of the 'db' directory adding to it the path in the params
     var filePath = __dirname.slice(0, __dirname.length - 7) + '/db/' + req.params[0];
     fs.unlink(filePath, (err) => {
         if (err) {
